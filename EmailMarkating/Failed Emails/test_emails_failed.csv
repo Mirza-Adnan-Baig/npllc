@@ -1,0 +1,3 @@
+email,error
+abc@,"{'abc@': (501, b'<abc@>: domain missing or malformed')}"
+mamnu@,"{'mamnu@': (501, b'<mamnu@>: domain missing or malformed')}"
