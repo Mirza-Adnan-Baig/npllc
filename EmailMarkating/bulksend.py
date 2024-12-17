@@ -145,7 +145,7 @@ email_message = """\
     <!-- Closing -->
     
     <p>Warm regards,<br><strong>The Ninja Patches Team</strong></p>
-    <p>If you no longer wish to receive these emails, <a href="https://ninjapatchesllc.com/unsubscribe" style="color: red;">unsubscribe here</a>.</p>
+    <p>If you no longer wish to receive these emails, <a href="https://ninjapatchesllc.com/unsubscribe/" style="color: red;">unsubscribe here</a>.</p>
     
 </body>
 </html>
