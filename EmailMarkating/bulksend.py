@@ -64,8 +64,8 @@ def send_bulk_emails(csv_file, sender_email, sender_password, subject, html_body
     except Exception as e:
         print(f"An error occurred: {e}")
 
-# Example usage 1 to 400
-csv_file_path = 'batches/emails_1_to_400.csv'
+# Example usage 401 to 800
+csv_file_path = 'batches/emails_401_to_800.csv'
 your_email = 'deals@ninjapatchesllc.com'
 your_password = '|wm)$4n1%f#1'
 email_subject = "Kick Off the New Year with 30% Off – Custom Patches Delivered in 5 Days!"
