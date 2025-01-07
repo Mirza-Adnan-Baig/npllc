@@ -64,30 +64,170 @@ def send_bulk_emails(csv_file, sender_email, sender_password, subject, html_body
     except Exception as e:
         print(f"An error occurred: {e}")
 
-# Example usage
-csv_file_path = 'test_emails.csv'
+# Example usage 1 to 400
+csv_file_path = 'batches/emails_1_to_400.csv'
 your_email = 'deals@ninjapatchesllc.com'
-your_password = '%(d2@67F232d'
-email_subject = "Custom Patches for Your Brand, Delivered Fast!"
+your_password = '|wm)$4n1%f#1'
+email_subject = "Kick Off the New Year with 30% Off – Custom Patches Delivered in 5 Days!"
 email_html = """\
-<html>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-    <p>Hi,</p>
-    <p>Looking for premium-quality custom patches? Ninja Patches LLC specializes in crafting patches tailored to your needs.</p>
-    <p><a href="https://ninjapatchesllc.com" style="color: #1a73e8; text-decoration: none;">Visit our website</a> to explore our options or <a href="https://wa.me/12138143526?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20custom%20patches." style="color: #1a73e8; text-decoration: none;">chat with us on WhatsApp</a>.</p>
-    <p>Warm regards,<br>The Ninja Patches Team</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Patches New Year Offer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .header {
+            text-align: center;
+            background: #fcb116;
+            color: white;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .body {
+            padding: 20px;
+        }
+        .body h2 {
+            color: #fcb116;
+            font-size: 20px;
+        }
+        .body ul {
+            list-style: none;
+            padding: 0;
+        }
+        .body ul li {
+            margin-bottom: 10px;
+        }
+        .cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cta a {
+            display: inline-block;
+            background: #fcb116;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .cta a:hover {
+            background: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Start 2025 in Style – High-Quality Custom Patches at 30% Off!</h1>
+        </div>
+        <div class="body">
+            
+            <p>Happy New Year from Ninja Patches! We're ringing in 2025 with an exclusive <strong>30% discount</strong> on all custom patches. Whether you're refreshing your brand, gearing up your team, or celebrating a special event, our precision-crafted patches are designed to impress.</p>
+            <h2>Why Choose Ninja Patches?</h2>
+            <ul>
+                <li>✨ <strong>Unmatched Quality</strong> – State-of-the-art machinery ensures patches that stand out and last.</li>
+                <li>⚡ <strong>Fastest Delivery</strong> – Get your patches within 5 business days—ideal for quick turnarounds.</li>
+                <li>💯 <strong>Satisfaction Guaranteed</strong> – Late delivery or production errors? We’ll refund you in full.</li>
+            </ul>
+            <h2>Explore Our Custom Patch Options</h2>
+            <ul>
+                <li>Embroidered Patches</li>
+                <li>Leather Patches</li>
+                <li>Printed Patches</li>
+                <li>PVC Patches</li>
+                <li>Military Patches</li>
+                <li>Woven Patches</li>
+                <li>Flag Patches</li>
+                <li>Biker Patches</li>
+                <li>University Patches</li>
+                <li>Chenille Patches</li>
+                <li>Felt Patches</li>
+            </ul>
+            <p><strong>Backings include:</strong> Iron-On, Tape, Velcro, Sew-On, and more. Need borders? Select from Hot-Cut or Merrowed to match your design needs.</p>
+            <h2>How to Order</h2>
+            <ol>
+                <li>Send us your artwork</li>
+                <li>Specify size and quantity.</li>
+                <li>We take care of the rest!</li>
+            </ol>
+            <h2>Contact Us Today</h2>
+            <p>🌐 <a href="https://ninjapatchesllc.com">Website</a>: ninjapatchesllc.com</p>
+            <p>📧 <strong>Orders & Queries:</strong> <a href="mailto:sales@ninjapatchesllc.com">sales@ninjapatchesllc.com</a></p>
+            <p>📧 <strong>Support & Compliance:</strong> <a href="mailto:info@ninjapatchesllc.com">info@ninjapatchesllc.com</a></p>
+        </div>
+        <div class="footer">
+            🎉 Don’t miss out—this New Year offer is available for a limited time. Start 2025 with custom patches that leave a lasting impression!  
+        </div>
+    </div>
 </body>
 </html>
+
 """
+
 email_plain = """\
-Hi,
+Start 2025 in Style – High-Quality Custom Patches at 30% Off!
 
-Looking for premium-quality custom patches? Ninja Patches LLC specializes in crafting patches tailored to your needs.
+Happy New Year from Ninja Patches! We're ringing in 2025 with an exclusive 30% discount on all custom patches. Whether you're refreshing your brand, gearing up your team, or celebrating a special event, our precision-crafted patches are designed to impress.
 
-Visit our website: https://ninjapatchesllc.com
-Chat with us on WhatsApp: https://wa.me/12138143526
+Why Choose Ninja Patches?
+✨ Unmatched Quality – State-of-the-art machinery ensures patches that stand out and last.
+⚡ Fastest Delivery – Get your patches within 5 business days—ideal for quick turnarounds.
+💯 Satisfaction Guaranteed – Late delivery or production errors? We’ll refund you in full.
 
-Warm regards,
+Explore Our Custom Patch Options
+Choose from a wide range of custom patches, including:
+
+Embroidered Patches
+Leather Patches
+Printed Patches
+PVC Patches
+Military Patches
+Woven Patches
+Flag Patches
+Biker Patches
+University Patches
+Chenille Patches
+Felt Patches
+Backings include Iron-On, Tape, Velcro, Sew-On, and more. Need borders? Select from Hot-Cut or Merrowed to match your design needs.
+
+How to Order
+It’s quick and easy:
+
+Send us your artwork
+Specify size and quantity.
+We take care of the rest!
+Contact Us Today
+🌐 Website: ninjapatchesllc.com
+📧 Orders & Queries: sales@ninjapatchesllc.com
+📧 Support & Compliance:info@ninjapatchesllc.com
+
+🎉 Don’t miss out—this New Year offer is available for a limited time. Start 2025 with custom patches that leave a lasting impression!
+
+Warm wishes,
 The Ninja Patches Team
 """
 
