@@ -64,18 +64,18 @@ def send_bulk_emails(csv_file, sender_email, sender_password, subject, html_body
     except Exception as e:
         print(f"An error occurred: {e}")
 
-# Example usage 401 to 800
-csv_file_path = 'batches/emails_401_to_800.csv'
+# Example usage 801 to 1200
+csv_file_path = '../Email_filter_script/email_filter/split_new_email_sheet/emails_201_to_400.csv'
 your_email = 'deals@ninjapatchesllc.com'
-your_password = '|wm)$4n1%f#1'
-email_subject = "Kick Off the New Year with 30% Off – Custom Patches Delivered in 5 Days!"
+your_password = 'nA;):2v@hv32'
+email_subject = "Limited Time: 10% Off Custom Patches – Order Now!"
 email_html = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ninja Patches New Year Offer</title>
+    <title>Get 10% Off – Custom Patches Designed Just for You!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,7 +95,7 @@ email_html = """\
         .header {
             text-align: center;
             background: #fcb116;
-            color: white;
+            color: #060e25;
             padding: 20px 0;
         }
         .header h1 {
@@ -106,12 +106,8 @@ email_html = """\
             padding: 20px;
         }
         .body h2 {
-            color: #fcb116;
+            color: #007bff;
             font-size: 20px;
-        }
-        .body ul {
-            list-style: none;
-            padding: 0;
         }
         .body ul li {
             margin-bottom: 10px;
@@ -123,13 +119,13 @@ email_html = """\
         .cta a {
             display: inline-block;
             background: #fcb116;
-            color: white;
+            color: #060e25;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
         }
         .cta a:hover {
-            background: #0056b3;
+            background: #b1b5b1;
         }
         .footer {
             text-align: center;
@@ -142,16 +138,16 @@ email_html = """\
 <body>
     <div class="email-container">
         <div class="header">
-            <h1>Start 2025 in Style – High-Quality Custom Patches at 30% Off!</h1>
+            <h1>Get 10% Off – Custom Patches Designed Just for You!</h1>
         </div>
         <div class="body">
-            
-            <p>Happy New Year from Ninja Patches! We're ringing in 2025 with an exclusive <strong>30% discount</strong> on all custom patches. Whether you're refreshing your brand, gearing up your team, or celebrating a special event, our precision-crafted patches are designed to impress.</p>
+            <h2>High-Quality Custom Patches – Now with a 10% Discount!</h2>
+            <p>High-quality custom patches – now at <strong>10% off</strong>! Whether for your brand, team, or a special project, we deliver patches that stand out.</p>
             <h2>Why Choose Ninja Patches?</h2>
             <ul>
-                <li>✨ <strong>Unmatched Quality</strong> – State-of-the-art machinery ensures patches that stand out and last.</li>
-                <li>⚡ <strong>Fastest Delivery</strong> – Get your patches within 5 business days—ideal for quick turnarounds.</li>
-                <li>💯 <strong>Satisfaction Guaranteed</strong> – Late delivery or production errors? We’ll refund you in full.</li>
+                <li>✔ <strong>10% Off Your Order</strong> – Get top-quality patches at a special price.</li>
+                <li>⚡ <strong>Rush Orders</strong> – Receive your patches in just 5 business days.</li>
+                <li>💯 <strong>Satisfaction Guaranteed</strong> – Full refund if we don’t meet our promise.</li>
             </ul>
             <h2>Explore Our Custom Patch Options</h2>
             <ul>
@@ -167,20 +163,25 @@ email_html = """\
                 <li>Chenille Patches</li>
                 <li>Felt Patches</li>
             </ul>
-            <p><strong>Backings include:</strong> Iron-On, Tape, Velcro, Sew-On, and more. Need borders? Select from Hot-Cut or Merrowed to match your design needs.</p>
-            <h2>How to Order</h2>
+            <p><strong>Backings include:</strong> Iron-On, Velcro, Sew-On, Tape, and more!</p>
+            <h2>How to Claim Your 10% Discount:</h2>
             <ol>
-                <li>Send us your artwork</li>
-                <li>Specify size and quantity.</li>
+                <li>Send us your artwork & requirements.</li>
+                <li>Use code <strong>SAVE10</strong> mention it in your email.</li>
                 <li>We take care of the rest!</li>
             </ol>
             <h2>Contact Us Today</h2>
-            <p>🌐 <a href="https://ninjapatchesllc.com">Website</a>: ninjapatchesllc.com</p>
+            <p>🌐 <a href="https://ninjapatchesllc.com/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount">Website</a> www.ninjapatchesllc.com</p>
             <p>📧 <strong>Orders & Queries:</strong> <a href="mailto:sales@ninjapatchesllc.com">sales@ninjapatchesllc.com</a></p>
             <p>📧 <strong>Support & Compliance:</strong> <a href="mailto:info@ninjapatchesllc.com">info@ninjapatchesllc.com</a></p>
+            <p>📞 <strong>Phone:</strong> +1 (213) 814-3526</p>
+        </div>
+        <div class="cta">
+            <a href="https://ninjapatchesllc.com/quote/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount">Order Now & Save 10%</a>
         </div>
         <div class="footer">
-            🎉 Don’t miss out—this New Year offer is available for a limited time. Start 2025 with custom patches that leave a lasting impression!  
+            <p>1005 Mount Olive Dr-5 Duarte M, CA 91010, USA</p>
+            <p><a href="https://ninjapatchesllc.com/unsubscribe">Unsubscribe</a></p>
         </div>
     </div>
 </body>
@@ -189,46 +190,49 @@ email_html = """\
 """
 
 email_plain = """\
-Start 2025 in Style – High-Quality Custom Patches at 30% Off!
 
-Happy New Year from Ninja Patches! We're ringing in 2025 with an exclusive 30% discount on all custom patches. Whether you're refreshing your brand, gearing up your team, or celebrating a special event, our precision-crafted patches are designed to impress.
+High-Quality Custom Patches – Now with a 10% Discount!
+
+High-quality custom patches – now at 10% off! Whether for your brand, team, or a special project, we deliver patches that stand out.
 
 Why Choose Ninja Patches?
-✨ Unmatched Quality – State-of-the-art machinery ensures patches that stand out and last.
-⚡ Fastest Delivery – Get your patches within 5 business days—ideal for quick turnarounds.
-💯 Satisfaction Guaranteed – Late delivery or production errors? We’ll refund you in full.
+✔ 10% Off Your Order – Get top-quality patches at a special price.
+⚡ Fastest Delivery – Receive your patches in just 5 business days.
+💯 Satisfaction Guaranteed – Full refund if we don’t meet our promise.
 
-Explore Our Custom Patch Options
-Choose from a wide range of custom patches, including:
+Explore Our Custom Patch Options:
+- Embroidered Patches
+- Leather Patches
+- Printed Patches
+- PVC Patches
+- Military Patches
+- Woven Patches
+- Flag Patches
+- Biker Patches
+- University Patches
+- Chenille Patches
+- Felt Patches
 
-Embroidered Patches
-Leather Patches
-Printed Patches
-PVC Patches
-Military Patches
-Woven Patches
-Flag Patches
-Biker Patches
-University Patches
-Chenille Patches
-Felt Patches
-Backings include Iron-On, Tape, Velcro, Sew-On, and more. Need borders? Select from Hot-Cut or Merrowed to match your design needs.
+Backings include: Iron-On, Velcro, Sew-On, Tape, and more!
 
-How to Order
-It’s quick and easy:
+How to Claim Your 10% Discount:
+1. Send us your artwork & requirements.
+2. Use code SAVE10 at checkout or mention it in your email.
+3. We take care of the rest!
 
-Send us your artwork
-Specify size and quantity.
-We take care of the rest!
-Contact Us Today
-🌐 Website: ninjapatchesllc.com
+Contact Us Today:
+🌐 Website: https://ninjapatchesllc.com/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount
 📧 Orders & Queries: sales@ninjapatchesllc.com
-📧 Support & Compliance:info@ninjapatchesllc.com
+📧 Support & Compliance: info@ninjapatchesllc.com
+📞 Phone: +1 (213) 814-3526
 
-🎉 Don’t miss out—this New Year offer is available for a limited time. Start 2025 with custom patches that leave a lasting impression!
+Order Now: https://ninjapatchesllc.com/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount
 
-Warm wishes,
-The Ninja Patches Team
+1005 Mount Olive Dr-5 Duarte M, CA 91010, USA
+Unsubscribe: https://ninjapatchesllc.com/unsubscribe
+
+This special 10% discount is only available for a limited time. Don’t miss out – place your order today!
+
 """
 
 send_bulk_emails(csv_file_path, your_email, your_password, email_subject, email_html, email_plain)
