@@ -67,14 +67,14 @@ def split_csv_into_chunks(merged_csv, output_folder, chunk_size=400):
         print(f"An error occurred: {e}")
 
 # Example usage:
-input_folder = 'new_email_sheet'  # Folder containing the input XLSX files
-merged_folder = 'new_email_sheet_merged'  # Folder to save the merged CSV
-merged_filename = 'new_email_sheet.csv'  # Name of the merged CSV file
-output_folder = 'split_new_email_sheet'  # Folder to save the split CSV files
+input_folder = 'Areeb_client_sheet'  # Folder containing the input XLSX files
+merged_folder = 'Areeb_client_sheet_merged'  # Folder to save the merged CSV
+merged_filename = 'Areeb_client_sheet.csv'  # Name of the merged CSV file
+output_folder = 'split_Areeb_client_sheet'  # Folder to save the split CSV files
 
 # Step 1: Extract and merge emails
 merged_csv_path = extract_and_merge_emails(input_folder, merged_folder, merged_filename)
 
 # Step 2: Split the merged CSV into chunks of 400 emails
-split_csv_into_chunks(merged_csv_path, output_folder, chunk_size=200)
+split_csv_into_chunks(merged_csv_path, output_folder, chunk_size=300)
 
