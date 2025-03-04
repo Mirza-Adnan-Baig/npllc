@@ -69,7 +69,7 @@ def split_csv_into_chunks(merged_csv, output_folder, chunk_size=400):
 # Example usage:
 input_folder = './Emails/new_email_sheet'  # Folder containing the input XLSX files
 merged_folder = 'new_email_sheet.27.02.25'  # Folder to save the merged CSV
-merged_filename = 'new_email_sheet.27.02.25'  # Name of the merged CSV file
+merged_filename = 'new_email_sheet.27.02.25.csv'  # Name of the merged CSV file
 output_folder = 'new_email_sheet.27.02.25'  # Folder to save the split CSV files
 
 # Step 1: Extract and merge emails
