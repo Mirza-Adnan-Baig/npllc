@@ -65,7 +65,7 @@ def send_bulk_emails(csv_file, sender_email, sender_password, subject, html_body
         print(f"An error occurred: {e}")
 
 # Example usage 801 to 1200
-csv_file_path = '../Email_filter_script/email_filter/Ninja_Email_Sheets_180325_Split/emails_1_to_200.csv'
+csv_file_path = '../Email_filter_script/email_filter/Ninja_Email_Sheets_180325_Split/emails_601_to_800.csv'
 your_email = 'deals@ninjapatchesllc.com'
 your_password = 'nA;):2v@hv32'
 email_subject = "Limited Time: 10% Off Custom Patches – Order Now!"
