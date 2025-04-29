@@ -74,14 +74,14 @@ def split_csv_into_chunks(merged_csv, output_folder, chunk_size=200):
         print(f"An error occurred while splitting: {e}")
 
 # Example usage
-input_folder = 'Ninja_Email_Sheets_180325'
-merged_folder = 'Ninja_Email_Sheets_180325_Merged'
-merged_filename = 'Ninja_Email_Sheets_180325.csv'
-output_folder = 'Ninja_Email_Sheets_180325_Split'
+input_folder = 'Leo_fisher_sheet'
+merged_folder = 'Leo_fisher_sheet_Merged'
+merged_filename = 'Leo_fisher_sheet.csv'
+output_folder = 'Leo_fisher_sheet_Split'
 
 # Step 1: Extract and merge emails
 merged_csv_path = extract_and_merge_emails(input_folder, merged_folder, merged_filename)
 
 # Step 2: Split into chunks only if merging was successful
 if merged_csv_path:
-    split_csv_into_chunks(merged_csv_path, output_folder, chunk_size=200)
+    split_csv_into_chunks(merged_csv_path, output_folder, chunk_size=400)
