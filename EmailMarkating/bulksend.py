@@ -64,174 +64,150 @@ def send_bulk_emails(csv_file, sender_email, sender_password, subject, html_body
     except Exception as e:
         print(f"An error occurred: {e}")
 
-# Example usage 801 to 1200
-csv_file_path = '../Email_filter_script/email_filter/Leo_fisher_sheet_Split/emails_1_to_400.csv'
+# Example usage Working on new ASI sheet
+csv_file_path = '../Email_filter_script/email_filter/Syscom_Data_Sheet_ASI_Split/emails_801_to_1200.csv'
 your_email = 'deals@ninjapatchesllc.com'
 your_password = 'nA;):2v@hv32'
-email_subject = "Limited Time: 10% Off Custom Patches – Order Now!"
+email_subject = "Exclusive Offer for ASI Members – Personalized Service + Discount Inside!"
 email_html = """\
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get 10% Off – Custom Patches Designed Just for You!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .email-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: #f9f9f9;
-            padding: 20px;
-            border: 1px solid #ddd;
-        }
-        .header {
-            text-align: center;
-            background: #fcb116;
-            color: #060e25;
-            padding: 20px 0;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .body {
-            padding: 20px;
-        }
-        .body h2 {
-            color: #007bff;
-            font-size: 20px;
-        }
-        .body ul li {
-            margin-bottom: 10px;
-        }
-        .cta {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .cta a {
-            display: inline-block;
-            background: #fcb116;
-            color: #060e25;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .cta a:hover {
-            background: #b1b5b1;
-        }
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Custom Patches and Digitizing – 10% Off</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333333;
+      background-color: #ffffff;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      background-color: #1a73e8;
+      color: #ffffff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888888;
+    }
+    .footer a {
+      color: #888888;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="email-container">
-        <div class="header">
-            <h1>Get 10% Off – Custom Patches Designed Just for You!</h1>
-        </div>
-        <div class="body">
-            <h2>High-Quality Custom Patches – Now with a 10% Discount!</h2>
-            <p>High-quality custom patches – now at <strong>10% off</strong>! Whether for your brand, team, or a special project, we deliver patches that stand out.</p>
-            <h2>Why Choose Ninja Patches?</h2>
-            <ul>
-                <li>✔ <strong>10% Off Your Order</strong> – Get top-quality patches at a special price.</li>
-                <li>⚡ <strong>Rush Orders</strong> – Receive your patches in just 5 business days.</li>
-                <li>💯 <strong>Satisfaction Guaranteed</strong> – Full refund if we don’t meet our promise.</li>
-            </ul>
-            <h2>Explore Our Custom Patch Options</h2>
-            <ul>
-                <li>Embroidered Patches</li>
-                <li>Leather Patches</li>
-                <li>Printed Patches</li>
-                <li>PVC Patches</li>
-                <li>Military Patches</li>
-                <li>Woven Patches</li>
-                <li>Flag Patches</li>
-                <li>Biker Patches</li>
-                <li>University Patches</li>
-                <li>Chenille Patches</li>
-                <li>Felt Patches</li>
-            </ul>
-            <p><strong>Backings include:</strong> Iron-On, Velcro, Sew-On, Tape, and more!</p>
-            <h2>How to Claim Your 10% Discount:</h2>
-            <ol>
-                <li>Send us your artwork & requirements.</li>
-                <li>Use code <strong>SAVE10</strong> mention it in your email.</li>
-                <li>We take care of the rest!</li>
-            </ol>
-            <h2>Contact Us Today</h2>
-            <p>🌐 <a href="https://ninjapatchesllc.com/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount">Website</a> www.ninjapatchesllc.com</p>
-            <p>📧 <strong>Orders & Queries:</strong> <a href="mailto:sales@ninjapatchesllc.com">sales@ninjapatchesllc.com</a></p>
-            <p>📧 <strong>Support & Compliance:</strong> <a href="mailto:info@ninjapatchesllc.com">info@ninjapatchesllc.com</a></p>
-            <p>📞 <strong>Phone:</strong> +1 (213) 814-3526</p>
-        </div>
-        <div class="cta">
-            <a href="https://ninjapatchesllc.com/quote/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount">Order Now & Save 10%</a>
-        </div>
-        <div class="footer">
-            <p>1005 Mount Olive Dr-5 Duarte M, CA 91010, USA</p>
-            <p><a href="https://ninjapatchesllc.com/unsubscribe">Unsubscribe</a></p>
-        </div>
-    </div>
+
+  <p>Hello,</p>
+
+  <p>I hope this message finds you well. My name is <strong>Mirza Adnan Baig</strong>, from <strong>Ninja Patches LLC</strong> and <strong>Distro Digitizing</strong>, and a proud ASI member (ASI #49932). I specialize in helping businesses like yours stand out with high-quality custom patches and expert digitizing services tailored for promotional products, apparel, and more.</p>
+
+  <p>Whether you're a brand looking to elevate your merchandise or need precise digitizing for your designs—we're here to deliver fast, reliable, and affordable service.</p>
+
+  <h3 style="color: #1a73e8;">What We Offer:</h3>
+
+  <p><strong><a href="https://ninjapatchesllc.com" style="color: #1a73e8;">Ninja Patches LLC</a></strong></p>
+  <ul>
+    <li>Embroidered, PVC, Leather, Woven, Chenille, and Custom Patches</li>
+    <li>Multiple backings: Iron-On, Velcro, Sew-On & more</li>
+    <li>Delivery in 5 business days</li>
+    <li>100% Satisfaction Guarantee</li>
+  </ul>
+
+  <p><strong><a href="https://distrodigitizing.com" style="color: #1a73e8;">Distro Digitizing</a></strong></p>
+  <ul>
+    <li>High-quality digitizing for embroidery</li>
+    <li>Vector conversions</li>
+    <li>Fast turnaround & expert support</li>
+    <li>Ideal for apparel decorators and promo shops</li>
+  </ul>
+
+  <p style="background-color: #f0f8ff; padding: 10px; border-left: 4px solid #1a73e8;">
+    🎉 <strong>Get 10% Off Your First Order!</strong><br>
+    Use reference code <strong>MAB10</strong> when you reply or mention it in your email to receive <strong>10% off</strong>.
+  </p>
+
+  <p><strong>💬 Our pricing is flexible and open to negotiation — we’ll work with your budget!</strong></p>
+
+  <p>Let’s discuss your project! You can reply to this email or contact our teams:</p>
+  <ul>
+    <li><a href="mailto:sales@ninjapatchesllc.com">sales@ninjapatchesllc.com</a></li>
+    <li><a href="mailto:sales@distrodigitizing.com">sales@distrodigitizing.com</a></li>
+    <li>📞 Phone: <a href="tel:+12133701437">+1 213 370 1437</a></li>
+  </ul>
+  
+  <p>Best regards,<br>
+  <strong>Mirza Adnan Baig</strong><br>
+  Co Founder – Ninja Patches LLC & Distro Digitizing<br>
+  ASI #49932<br>
+
+  <!-- CTA Button -->
+  <div class="cta">
+    <a href="https://ninjapatchesllc.com/quote/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount">Order Now & Save 10%</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>26429 Whisper Mill Circle, Santa Clarita, California, 91350</p>
+    <p><a href="https://ninjapatchesllc.com/unsubscribe">Unsubscribe</a></p>
+  </div>
 </body>
 </html>
+
 
 """
 
 email_plain = """\
 
-High-Quality Custom Patches – Now with a 10% Discount!
+Exclusive Offer for ASI Members – Personalized Service + Discount Inside!
 
-High-quality custom patches – now at 10% off! Whether for your brand, team, or a special project, we deliver patches that stand out.
+Hello,
 
-Why Choose Ninja Patches?
-✔ 10% Off Your Order – Get top-quality patches at a special price.
-⚡ Fastest Delivery – Receive your patches in just 5 business days.
-💯 Satisfaction Guaranteed – Full refund if we don’t meet our promise.
+I hope this message finds you well. My name is Mirza Adnan Baig, from Ninja Patches LLC and Distro Digitizing, and a proud ASI member (ASI #49932). I specialize in helping businesses like yours stand out with high-quality custom patches and expert digitizing services tailored for promotional products, apparel, and more.
 
-Explore Our Custom Patch Options:
-- Embroidered Patches
-- Leather Patches
-- Printed Patches
-- PVC Patches
-- Military Patches
-- Woven Patches
-- Flag Patches
-- Biker Patches
-- University Patches
-- Chenille Patches
-- Felt Patches
+Whether you're a brand looking to elevate your merchandise or need precise digitizing for your designs—we're here to deliver fast, reliable, and affordable service.
 
-Backings include: Iron-On, Velcro, Sew-On, Tape, and more!
+What We Offer:
+Ninja Patches LLC
 
-How to Claim Your 10% Discount:
-1. Send us your artwork & requirements.
-2. Use code SAVE10 at checkout or mention it in your email.
-3. We take care of the rest!
+Embroidered, PVC, Leather, Woven, Chenille, and Custom Patches
+Multiple backings: Iron-On, Velcro, Sew-On & more
+Delivery in 5 business days
+100% Satisfaction Guarantee
+Distro Digitizing
 
-Contact Us Today:
-🌐 Website: https://ninjapatchesllc.com/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount
-📧 Orders & Queries: sales@ninjapatchesllc.com
-📧 Support & Compliance: info@ninjapatchesllc.com
-📞 Phone: +1 (213) 814-3526
+High-quality digitizing for embroidery
+Vector conversions
+Fast turnaround & expert support
+Ideal for apparel decorators and promo shops
+🎉 Get 10% Off Your First Order!
+Use reference code MAB10 when you reply or mention it in your email to receive 10% off.
 
-Order Now: https://ninjapatchesllc.com/?utm_source=email&utm_medium=newsletter&utm_campaign=10percent_discount
+💬 Our pricing is flexible and open to negotiation — we’ll work with your budget!
 
-1005 Mount Olive Dr-5 Duarte M, CA 91010, USA
-Unsubscribe: https://ninjapatchesllc.com/unsubscribe
+Let’s discuss your project! You can reply to this email or contact our teams:
 
-This special 10% discount is only available for a limited time. Don’t miss out – place your order today!
+sales@ninjapatchesllc.com
+sales@distrodigitizing.com
+📞 Phone: +1 213 370 1437
+Best regards,
+Mirza Adnan Baig
+Co Founder – Ninja Patches LLC & Distro Digitizing
+ASI #49932
+
+Order Now & Save 10%
+
+26429 Whisper Mill Circle, Santa Clarita, California, 91350
+
+Unsubscribe
 
 """
 
