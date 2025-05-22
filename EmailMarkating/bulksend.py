@@ -65,7 +65,7 @@ def send_bulk_emails(csv_file, sender_email, sender_password, subject, html_body
         print(f"An error occurred: {e}")
 
 # Example usage Working on new ASI sheet
-csv_file_path = '../Email_filter_script/email_filter/Syscom_Data_Sheet_ASI_Split/emails_801_to_1200.csv'
+csv_file_path = '../Email_filter_script/email_filter/Syscom_Data_Sheet_ASI_Split/emails_1201_to_1600.csv'
 your_email = 'deals@ninjapatchesllc.com'
 your_password = 'nA;):2v@hv32'
 email_subject = "Exclusive Offer for ASI Members – Personalized Service + Discount Inside!"
